@@ -11,7 +11,7 @@ import Menu from './Menu';
 import { useGlobalContext } from './utils/context';
 const Header = () => {
   // states
-  const { inputChange, setInputChang } = useGlobalContext();
+  const { inputChange, setInputChange } = useGlobalContext();
 
   // const widthRef = useRef(0);
   //
