@@ -11,10 +11,9 @@ import Menu from './Menu';
 import { useGlobalContext } from './utils/context';
 const Header = () => {
   // states
-  const { inputChange, setInputChange, menuWidth, setMenuWidth } =
-    useGlobalContext();
+  const { inputChange, setInputChang } = useGlobalContext();
 
-  const widthRef = useRef(0);
+  // const widthRef = useRef(0);
   //
   // useEffect(() => {
   //   if (widthRef.current) {
@@ -34,6 +33,7 @@ const Header = () => {
               className='rounded-full'
               layout='fill'
               objectFit='contain'
+              alt='pinterest logo'
             />
           </div>
         </div>
@@ -43,7 +43,7 @@ const Header = () => {
           Home
         </button>
         {/* search bar  */}
-        <div className='flex-1 relative  py-2 ' ref={widthRef}>
+        <div className='flex-1 relative  py-2 '>
           <div className='absolute inset-y-0 flex items-center justify-center'>
             <SearchIcon className='w-5 ml-4 h-5 fill-gray-400' />
           </div>
@@ -69,7 +69,7 @@ const Header = () => {
             <Link href={''} className=' inline-block'>
               <img
                 src='https://lh3.googleusercontent.com/ogw/ADea4I6zGEGOUYpGZl7Gxmn8egwtDeSMQ_UxJ5GeTuaEvA=s32-c-mo'
-                alt=''
+                alt='image'
                 className='rounded-full h-6 w-6'
               />
             </Link>

@@ -26,7 +26,11 @@ const MainContent = () => {
               <ExternalLinkIcon className='h-5 w-5 fill-gray-600' />
               {img.user?.portfolio_url ? (
                 <p className='text-sm max-w-[80px] truncate '>
-                  <a href={`${img.user?.portfolio_url}`} target='_blank'>
+                  <a
+                    href={`${img.user?.portfolio_url}`}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
                     {img?.user?.username}
                   </a>
                 </p>
