@@ -21,11 +21,11 @@ const MainContent = () => {
 
           {/* ---------------- */}
           {/* Action buttons  */}
-          <div className=' hidden  absolute bottom-4 group-hover:inline-flex  gap-6 left-1/2 text-gray-600 -translate-x-1/2'>
-            <span className='px-4 flex gap-2 py-1.5 rounded-full bg-white text-black font-semibold'>
+          <div className=' hidden  absolute bottom-2 sm:bottom-4 group-hover:inline-flex  gap-6 left-1/2 text-gray-600 -translate-x-1/2'>
+            <span className='px-4 hidden sm:inline-flex flex gap-2 py-1.5 rounded-full bg-white text-black font-semibold'>
               <ExternalLinkIcon className='h-5 w-5 fill-gray-600' />
               {img.user?.portfolio_url ? (
-                <p className='text-sm max-w-[80px] truncate '>
+                <p className='text-sm hidden sm:inline-flex max-w-[80px] truncate '>
                   <a
                     target='_blank'
                     rel='noreferrer'
@@ -35,18 +35,18 @@ const MainContent = () => {
                   </a>
                 </p>
               ) : (
-                <p className='text-sm max-w-[80px] truncate'>
+                <p className='text-sm hidden sm:inline-flex max-w-[80px] truncate'>
                   {img?.user?.username}
                 </p>
               )}
             </span>
             <a
-              className='p-1.5 flex-none bg-white rounded-full'
+              className='sm:p-1.5 p-1 flex-none bg-white/60 rounded-full'
               href={`${img.links?.html}`}
               target='_blank'
               rel='noreferrer'
             >
-              <CloudDownloadIcon className='h-5 w-5 ' />
+              <CloudDownloadIcon className='sm:h-5 sm:w-5 h-4 w-4 stroke-gray-900 ' />
             </a>
           </div>
         </div>
