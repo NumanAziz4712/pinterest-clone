@@ -29,7 +29,7 @@ const MainContent = () => {
                   <a
                     href={`${img.user?.portfolio_url}`}
                     target='_blank'
-                    rel='noreferrer'
+                    rel='noopener noreferrer'
                   >
                     {img?.user?.username}
                   </a>
