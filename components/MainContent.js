@@ -26,7 +26,11 @@ const MainContent = () => {
               <ExternalLinkIcon className='h-5 w-5 fill-gray-600' />
               {img.user?.portfolio_url ? (
                 <p className='text-sm max-w-[80px] truncate '>
-                  <a href={`${img.user?.portfolio_url}`}>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href={`${img.user?.portfolio_url}`}
+                  >
                     {img?.user?.username}
                   </a>
                 </p>
@@ -40,6 +44,7 @@ const MainContent = () => {
               className='p-1.5 flex-none bg-white rounded-full'
               href={`${img.links?.html}`}
               target='_blank'
+              rel='noreferrer'
             >
               <CloudDownloadIcon className='h-5 w-5 ' />
             </a>
