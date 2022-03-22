@@ -9,7 +9,7 @@ const Menu = () => {
         className='min-h-screen  bg-black/30'
         onClick={() => setInputChange(false)}
       >
-        <div className='bg-white rounded-b-xl'>
+        <div className=' overflow-y-auto bg-white rounded-b-xl'>
           <div
             // style={{
             //   maxWidth: `${menuWidth}px`,

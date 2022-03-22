@@ -21,7 +21,7 @@ const MainContent = () => {
 
           {/* ---------------- */}
           {/* Action buttons  */}
-          <div className=' hidden  absolute bottom-2 sm:bottom-4 group-hover:inline-flex  gap-6 left-1/2 text-gray-600 -translate-x-1/2'>
+          <div className=' hidden  absolute bottom-3 sm:bottom-4 group-hover:inline-flex  gap-6 left-1/2 text-gray-600 -translate-x-1/2'>
             <span className='px-4 hidden sm:inline-flex flex gap-2 py-1.5 rounded-full bg-white text-black font-semibold'>
               <ExternalLinkIcon className='h-5 w-5 fill-gray-600' />
               {img.user?.portfolio_url ? (
@@ -41,12 +41,12 @@ const MainContent = () => {
               )}
             </span>
             <a
-              className='sm:p-1.5 p-1 flex-none bg-white/60 rounded-full'
+              className='sm:p-1.5 p-1 flex-none sm:bg-white bg-white/60 rounded-full'
               href={`${img.links?.html}`}
               target='_blank'
               rel='noreferrer'
             >
-              <CloudDownloadIcon className='sm:h-5 sm:w-5 h-4 w-4 stroke-gray-900 ' />
+              <CloudDownloadIcon className='sm:h-5 sm:w-5 h-4 w-4 sm:stroke-gray-600 stroke-gray-900 ' />
             </a>
           </div>
         </div>

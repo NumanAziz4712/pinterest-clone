@@ -6,7 +6,7 @@ const MenuImages = () => {
   const { apiData } = useGlobalContext();
   return (
     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-3'>
-      {apiData.slice(0, 10).map((image) => (
+      {apiData.slice(0, 8).map((image) => (
         <div key={image.id}>
           {/* single image */}
           <div className='bg-black relative h-24 rounded-xl overflow-hidden'>
