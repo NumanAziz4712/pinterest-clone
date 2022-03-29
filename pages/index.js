@@ -1,13 +1,23 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import Alert from '../components/Alert';
 import Header from '../components/Header';
 import Loader from '../components/Loader';
+import { useEffect } from 'react';
 import MainContent from '../components/MainContent';
 import { useGlobalContext } from '../components/utils/context';
-import { mansorimage } from '../data';
+
 export default function Home() {
-  const { isLoading } = useGlobalContext();
+  const { isLoading, MyAlert, setMyAlert } = useGlobalContext();
+  useEffect(() => {
+    const time = setTimeout(() => {
+      setMyAlert(false);
+    }, 2000);
+
+    return () => {
+      clearTimeout(time);
+    };
+  }, [MyAlert]);
+
   return (
     <div>
       <Head>
@@ -19,9 +29,10 @@ export default function Home() {
       <main className='relative'>
         {/* header */}
         <Header />
-        {isLoading && <Loader />}
+        {MyAlert && <Alert msg='please provide a value' />}
+
         {/* main content */}
-        <MainContent />
+        {isLoading ? <Loader /> : <MainContent />}
       </main>
     </div>
   );

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { useEffect } from 'react';
-import { data } from '../data';
+
 import { useGlobalContext } from './utils/context';
 const MenuImages = () => {
   const { apiData } = useGlobalContext();

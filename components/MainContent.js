@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import React from 'react';
-import { mansorimage } from '../data';
+
 import { ExternalLinkIcon } from '@heroicons/react/solid';
 import { CloudDownloadIcon } from '@heroicons/react/outline';
 import { useGlobalContext } from './utils/context';
-import Image from 'next/image';
+
 const MainContent = () => {
-  const { apiData } = useGlobalContext();
+  const { apiData, queryData } = useGlobalContext();
 
   return (
-    <div className='px-10 relative z-0 mt-10 mx-auto columns-2 gap-5 sm:columns-2  md:columns-3 lg:columns-4 xl:columns-5 max-w-full'>
+    <div className='px-10 relative z-0 my-5 mx-auto columns-2 gap-5 sm:columns-2  md:columns-3 lg:columns-4 xl:columns-5 max-w-full'>
       {apiData?.map((img) => (
         <div
           className='max-w-full cursor-zoom-in group mb-5 overflow-hidden rounded-lg relative'
