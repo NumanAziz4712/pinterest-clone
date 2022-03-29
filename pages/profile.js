@@ -15,9 +15,11 @@ const Profile = () => {
           {/* name */}
           <div className='text-center '>
             <h1 className='font-bold text-4xl mb-3'>{session?.user?.name}</h1>
-            <p className='text-sm mb-1 text-gray-400'>
-              @{session?.user?.email.split('@')[0].toLowerCase()}
-            </p>
+            {session?.user?.email && (
+              <p className='text-sm mb-1 text-gray-400'>
+                @{session?.user?.email?.split('@')[0].toLowerCase()}
+              </p>
+            )}
             <p className='text-gray-700'>20 following</p>
           </div>
 
