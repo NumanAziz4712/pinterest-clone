@@ -76,7 +76,7 @@ const Header = () => {
         </div>
 
         {/* home button */}
-        <button className='rounded-full text-black sm:bg-black py-2.5 px-4  font-bold hover:bg-gray-100 sm:hover:bg-black sm:text-white'>
+        <button className='rounded-full bg-black text-white py-2.5 px-4  font-bold hidden sm:inline-flex'>
           <Link href={'/'}>Home</Link>
         </button>
         {/* search bar  */}
