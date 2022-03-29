@@ -54,11 +54,11 @@ const signin = ({ providers }) => {
           <div className='divide-y divide-gray-100'>
             <div className='pb-6'>
               <p className='text-xs leading-5 text-gray-400'>
-                By continuing, you agree to Pinterest's <br />
+                By continuing, you agree to Pinterest&lsquo;s <br />
                 <span className='font-bold text-gray-800 '>
                   Terms of Service
                 </span>{' '}
-                and acknowledge that you've read <br /> our{' '}
+                and acknowledge that you&lsquo;ve read <br /> our{' '}
                 <span className='font-bold text-gray-700 '>Privacy Policy</span>
               </p>
             </div>

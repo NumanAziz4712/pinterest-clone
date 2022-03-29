@@ -14,15 +14,17 @@ export async function middleware(req) {
     url.pathname = path;
     return NextResponse.redirect(url);
   };
-  if (
-    (session && req.nextUrl.pathname === '/signup') ||
-    req.nextUrl.pathname === '/auth/signin'
-  ) {
+  if (session && req.nextUrl.pathname === '/signup') {
     return redirectUser('/');
   }
-
-  if (req.nextUrl.pathname === '/' || req.nextUrl.pathname === '/profile') {
-    if (!session) redirectUser('/signup');
+  if (session && req.nextUrl.pathname === '/auth/signin') {
+    return redirectUser('/');
+  }
+  if (
+    !session &&
+    (req.nextUrl.pathname === '/' || req.nextUrl.pathname === '/profile')
+  ) {
+    return redirectUser('/signup');
   } else if (req.nextUrl.pathname === '/login') {
     if (session) redirectUser('/');
   }

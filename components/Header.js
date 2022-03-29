@@ -107,13 +107,15 @@ const Header = () => {
           </button>
 
           <button className='rounded-full focus:ring-blue-300 focus:ring hover:bg-gray-100 p-3'>
-            <Link href={'/profile/'} className=' inline-block'>
-              <img
-                src={session?.user?.image}
-                alt='image'
-                className='rounded-full h-6 w-6'
-              />
-            </Link>
+            {session && (
+              <Link href={'/profile/'} className=' inline-block'>
+                <img
+                  src={session?.user?.image}
+                  alt='image'
+                  className='rounded-full h-6 w-6'
+                />
+              </Link>
+            )}
           </button>
           <button className=' '>
             <Logout />
