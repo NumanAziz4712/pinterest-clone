@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import { useSession } from 'next-auth/react';
 
-const profile = () => {
+const Profile = () => {
   const { data: session } = useSession();
   return (
     <div className='h-screen bg-white '>
@@ -36,4 +36,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default Profile;
