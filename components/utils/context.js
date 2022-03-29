@@ -48,7 +48,7 @@ const AppProvider = ({ children }) => {
     return () => {
       getData();
     };
-  }, [url, getData]);
+  }, [url]);
 
   // submit
 
